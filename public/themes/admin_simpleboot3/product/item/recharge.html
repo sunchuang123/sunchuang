@@ -1,0 +1,28 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('item/index')}">{:lang('PRODUCTITEM')}</a></li>
+			<!--<li><a href="{:url('item/itemAdd')}">{:lang('ADD_PRODUCTITEM')}</a></li>-->
+			<li><a href="{:url('item/itembatch')}">{:lang('BATCH_PRODUCTITEM')}</a></li>
+			<li class="active"><a>{:lang('RECHARGE')}</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form margin-top-20" action="{:url('item/rechargePost')}" method="post">
+			<div class="form-group">
+				<label for="input-day" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('RECHARGEDAY')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-day" name="day">
+				</div>
+			</div>
+			<div class="form-group">
+				<input type="hidden" name="id" value="{$id}"/>
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('RECHARGE')}</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

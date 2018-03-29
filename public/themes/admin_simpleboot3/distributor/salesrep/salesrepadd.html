@@ -1,0 +1,67 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('salesrep/index')}">{:lang('SALESRPE')}</a></li>
+			<li class="active"><a href="{:url('salesrep/salesrepAdd')}">{:lang('ADD_SALESRPE')}</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form margin-top-20" action="{:url('salesrep/salesrepAddPost')}" method="post">
+			<div class="form-group">
+				<label for="input-lastName" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('LANSTNAME')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-lastName" name="lastName">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-firstName" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('FIRSTNAME')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-firstName" name="firstName">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-extension" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('EXTESNION')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-extension" name="extension">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-email" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('EMAIL')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-email" name="email">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-officeCode" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('OFFICECODE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-officeCode" name="officeCode">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-reportsTo" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('REPORTSTO')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-reportsTo" name="reportsTo">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-jobTitle" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('JOBTITLE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-jobTitle" name="jobTitle">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-distributor_distributorID" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('DISTRIBUTOR')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-distributor_distributorID" name="distributor_distributorID">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

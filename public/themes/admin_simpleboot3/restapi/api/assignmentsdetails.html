@@ -1,0 +1,187 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('api/assignments')}">{:lang('ASSIGNMENTS')}</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form margin-top-20" >
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('DEVICEHARDWAREID')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.createdDate}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('CREATEDBY')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.createdBy}">
+				</div>
+			</div>
+			<!--<div class="form-group">-->
+				<!--<label class="col-sm-2 control-label">{:lang('DELETED')}</label>-->
+				<!--<div class="col-md-6 col-sm-10">-->
+					<!--<input type="text" readonly="true" class="form-control"value="{$res.deleted}">-->
+				<!--</div>-->
+			<!--</div>-->
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('TOKEN')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.token}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('DEVICEHARDWAREID')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.deviceHardwareId}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('ASSIGNMENTTYPE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.assignmentType}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SITECREATEDDATE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.site.createdDate}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SITECREATEDBY')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.site.createdBy}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SITEUPDATEDDATE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.site.updatedDate}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SITEUPDATEDBY')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.site.updatedBy}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SITETOKEN')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.site.token}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SITENAME')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.site.name}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SITEDESCRIPTION')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.site.description}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SITEIMAGEURL')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.site.imageUrl}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SITEMAPTYPE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.site.map.type}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SITEMAPZOOMLEVEL')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.site.map.metadata.zoomLevel}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SITEMAPCENTERLATITUDE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.site.map.metadata.centerLatitude}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SITEMAPCENTERLONGITUDE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.site.map.metadata.centerLongitude}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SITEMAPSITETOKEN')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.siteToken}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('ACTIVEDATE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.activeDate}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('DEVICECREATEDDATE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.device.createdDate}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('DEVICECREATEDBY')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.device.createdBy}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('DEVICEHARDWAREID')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.device.hardwareId}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('DEVICESITETOKEN')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.device.siteToken}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('DEVICESPECIFICATIONTOKEN')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.device.specificationToken}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('DEVICEASSIGNMENTTOKEN')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.device.assignmentToken}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('DEVICEASSETID')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.device.assetId}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('DEVICEASSETNAME')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.device.assetName}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('DEVICEASSETIMAGEURL')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.device.assetImageUrl}">
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('user/index')}">{:lang('MESSAGE_USER')}</a></li>
+		</ul>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th align="left">{:lang('DATETIME')}</th>
+					<th align="left">{:lang('TYPE')}</th>
+					<th align="left">{:lang('MESSAGE')}</th>
+					<th align="left">{:lang('USER')}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="user" item="vo">
+				<tr>
+					<td>{$vo.messageFromUserDateTIme}</td>
+					<td>{$vo.messageFromUserType}</td>
+					<td>{$vo.messageFromUserText}</td>
+					<td>{$vo.user_userD|user_name}</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

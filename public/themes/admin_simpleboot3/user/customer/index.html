@@ -1,0 +1,55 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('customer/index')}">{:lang('CUSTOMER')}</a></li>
+			<li><a href="{:url('customer/customerAdd')}">{:lang('ADD_CUSTOMER')}</a></li>
+		</ul>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th width="40">ID1</th>
+					<th >{:lang('LANSTNAME')}</th>
+					<th >{:lang('FIRSTNAME')}</th>
+					<th >{:lang('PHONE_NUMBER')}</th>
+					<th >{:lang('EMAIL')}</th>
+					<th >{:lang('LOCATIONGPS')}</th>
+					<th >{:lang('ADDRESSLINE1')}</th>
+					<th >{:lang('ADDRESSLINE2')}</th>
+					<th >{:lang('CITY')}</th>
+					<th >{:lang('STATE')}</th>
+					<th >{:lang('COUNTRYID')}</th>
+					<th >{:lang('POSTALCODE')}</th>
+					<th >{:lang('AGENT')}</th>
+					<th >{:lang('ACTIONS')}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="user" item="vo">
+				<tr>
+					<td>{$vo.userD}</td>
+					<td>{$vo.lastName}</td>
+					<td>{$vo.firstName}</td>
+					<td>{$vo.phoneNumber}</td>
+					<td>{$vo.email}</td>
+					<td>{$vo.locationGPS}</td>
+					<td>{$vo.address1}</td>
+					<td>{$vo.address2}</td>
+					<td>{$vo.city}</td>
+					<td>{$vo.state}</td>
+					<td>{$vo.country}</td>
+					<td>{$vo.postCode}</td>
+					<td>{$vo.agent_agentID|agent_name}</td>
+					<td>
+						<a href="{:url('Customer/customeredit',array('id'=>$vo['userD']))}">{:lang('EDIT')}</a>
+						<a class="js-ajax-delete" href="{:url('Customer/customerDelete',array('id'=>$vo['userD']))}">{:lang('DELETE')}</a>
+					</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('plan/index')}">{:lang('PAYPLAN')}</a></li>
+		</ul>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th width="40">ID</th>
+					<th align="left">{:lang('TYPE')}</th>
+					<th align="left">{:lang('STARTDATE')}</th>
+					<th align="left">{:lang('ENDDATE')}</th>
+					<th align="left">{:lang('STATUS')}</th>
+					<th align="left">{:lang('TOTAL')}</th>
+					<th align="left">{:lang('DOWNPAYMENT')}</th>
+					<th align="left">{:lang('PAIDTODATE')}</th>
+					<th align="left">{:lang('EACHPAYPERIOD')}</th>
+					<th align="left">{:lang('EACHPAYAMOUNT')}</th>
+					<th align="left">{:lang('USER')}</th>
+					<th align="left">{:lang('PRODUCTITEM')}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="plan" item="vo">
+				<tr>
+					<td>{$vo.payPlanID}</td>
+					<td>{$vo.payPlanType}</td>
+					<td>{$vo.payPlanStartDate}</td>
+					<td>{$vo.payPlanEndDate}</td>
+					<td>{$vo.payPlanStatus}</td>
+					<td>{$vo.payPlanTotal}</td>
+					<td>{$vo.payPlanDown}</td>
+					<td>{$vo.payPlanPaidToDate}</td>
+					<td>{$vo.eachPayPeriod}</td>
+					<td>{$vo.eachPayAmount}</td>
+					<td>{$vo.user_userD}</td>
+					<td>{$vo.product_item_productItemID}</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

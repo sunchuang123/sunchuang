@@ -1,0 +1,58 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('batch/index')}">{:lang('BATCH')}</a></li>
+		</ul>
+		<form class="well form-inline margin-top-20" method="post" action="{:url('batch/index')}">&nbsp;&nbsp;&nbsp;
+			批号:
+			<input type="text" class="form-control" name="keyword" style="width: 200px;"
+				   value="{$keyword}" placeholder="请输入关键字...">
+			&nbsp;&nbsp;&nbsp;添加日期:
+			<input class="form-control js-bootstrap-date" type="text" name="date"
+				   value="{$date}" placeholder="请输入选择日期">
+			<input type="submit" class="btn btn-primary" value="搜索"/>
+			<a class="btn btn-danger" href="{:url('batch/index')}">清空</a>
+		</form>
+		<div class="margin-top-20">
+			<table class="table table-hover table-bordered">
+				<thead>
+				<tr>
+					<th width="90">编号</th>
+					<th align="left">{:lang('BATCHNUMBER')}</th>
+					<th align="left">{:lang('PRODUCTBATCHDATE')}</th>
+					<th align="left">{:lang('COUNT')}</th>
+					<th align="left">{:lang('PRODUCTBATCHNOTES')}</th>
+					<th align="left">{:lang('ACTIONS')}</th>
+				</tr>
+				</thead>
+				<tbody>
+				<foreach name="batch" item="vo">
+					<tr>
+						<td>{$vo.productBatchID}</td>
+						<td>{$vo.productBatchNumber}</td>
+						<td>{$vo.productBatchDate}</td>
+						<td>{$vo.number}</td>
+						<td>{$vo.productBatchNotes}</td>
+						<td>
+							<a href="{:url('batch/itembatch',array('id'=>$vo['productBatchID']))}">{:lang('EDIT')}</a>
+							<a href="{:url('batch/exportExcle',array('id'=>$vo['productBatchID']))}">导出Excel</a>
+							<if condition="$vo.locking eq 0">
+								<a href="{:url('batch/additionalProduct',array('id'=>$vo['productBatchID']))}">追加产品</a>
+								<a class="js-ajax-dialog-btn" href="{:url('batch/locking',array('id'=>$vo['productBatchID']))}">出厂锁定</a>
+								<else/>
+								<span style="text-decoration: underline;color: darkgray;">追加产品</span>
+								<span style="text-decoration: underline;color: darkgray;">出厂锁定</span>
+							</if>
+						</td>
+					</tr>
+				</foreach>
+				</tbody>
+			</table>
+		</div>
+		<ul class="pagination">{$page}</ul>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

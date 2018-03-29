@@ -1,0 +1,35 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('payment/index')}">{:lang('PAYMENT')}</a></li>
+		</ul>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th width="40">ID</th>
+					<th align="left">{:lang('REFERENCE')}</th>
+					<th align="left">{:lang('DATE')}</th>
+					<th align="left">{:lang('AMOUNT')}</th>
+					<th align="left">{:lang('NOTE')}</th>
+					<th align="left">{:lang('PAYPLAN')}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="payment" item="vo">
+				<tr>
+					<td>{$vo.paymentID}</td>
+					<td>{$vo.paymentReference}</td>
+					<td>{$vo.paymentDate}</td>
+					<td>{$vo.paymentAmount}</td>
+					<td>{$vo.paymentNote}</td>
+					<td>{$vo.payPlan_payPlanID|}</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

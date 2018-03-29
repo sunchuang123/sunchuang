@@ -1,0 +1,37 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('order/index')}">{:lang('ORDERPRODUCT')}</a></li>
+		</ul>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th width="40">ID</th>
+					<th align="left">{:lang('QUANTITYORDERED')}</th>
+					<th align="left">{:lang('ORDERLINENUMBER')}</th>
+					<th align="left">{:lang('PRICEEACH')}</th>
+					<th align="left">{:lang('ORDERID')}</th>
+					<th align="left">{:lang('DISTRIBUTORORDERORDERID')}</th>
+					<th align="left">{:lang('PRODUCTMODEL')}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="order" item="vo">
+				<tr>
+					<td>{$vo.orderProductcID}</td>
+					<td>{$vo.quantityOrdered}</td>
+					<td>{$vo.orderLineNumber}</td>
+					<td>{$vo.priceEach}</td>
+					<td>{$vo.orderID}</td>
+					<td>{$vo.distributor_order_orderID}</td>
+					<td>{$vo.product_model_productModelID}</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

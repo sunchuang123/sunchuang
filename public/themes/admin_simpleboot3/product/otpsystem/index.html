@@ -1,0 +1,42 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('otpsystem/index')}">{:lang('OTPSYSTEM')}</a></li>
+			<li><a href="{:url('otpsystem/otpAdd')}">{:lang('ADD_OTPSYSTEM')}</a></li>
+		</ul>
+		<div class="margin-top-20">
+			<table class="table table-hover table-bordered">
+				<thead>
+					<tr>
+						<th width="90">编号</th>
+						<th align="left">{:lang('OTPSYSTEMNAME')}</th>
+						<th align="left">{:lang('OTPOPERATORDESCRIPTION')}</th>
+						<th align="left">{:lang('OTPHASHCHAINLENGTH')}</th>
+						<th align="left">{:lang('OTPMAXHCJ')}</th>
+						<th align="left">{:lang('ACTIONS')}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="otpSystem" item="vo">
+					<tr>
+						<td>{$vo.otpSystemID}</td>
+						<td>{$vo.otpSystemName}</td>
+						<td>{$vo.otpOperatorDescription}</td>
+						<td>{$vo.otpHashChainLength}</td>
+						<td>{$vo.otpMaxHCJ}</td>
+						<td>
+							<a href="{:url('otpsystem/otpedit',array('id'=>$vo['otpSystemID']))}">{:lang('EDIT')}</a>
+							<a class="js-ajax-delete" href="{:url('otpsystem/otpdelete',array('id'=>$vo['otpSystemID']))}">{:lang('DELETE')}</a>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>
+		</div>
+		<ul class="pagination">{$page}</ul>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<include file="public@header"/>
+</head>
+<body>
+<div class="wrap js-check-wrap">
+    <ul class="nav nav-tabs">
+        <li><a href="{:url('order/index')}">{:lang('DISTRIBUTOR_ORDER')}</a></li>
+        <li class="active"><a href="{:url('order/orderdetails')}">{:lang('ORDERDETAILS')}</a></li>
+    </ul>
+    <div class="form-horizontal margin-top-20 container">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-bordered">
+                    <tr>
+                        <th width="100">{:lang('ORDER_DATE')}</th>
+                        <td>
+                            <div class="form-control">{$order.orderDate}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>{:lang('REQUIRED_DATE')}</th>
+                        <td>
+                            <div class="form-control">{$order.requiredDate}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>{:lang('SHIPPED_DATE')}</th>
+                        <td>
+                            <div class="form-control">{$order.shippedDate}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>{:lang('STATUS')}</th>
+                        <td>
+                            <div class="form-control">{$order.status}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>{:lang('COMMENTS')}</th>
+                        <td>
+                            <div class="form-control">{$order.comments}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>{:lang('DISTRIBUTOR')}</th>
+                        <td>
+                            <div class="form-control">{$order.fk_distributor_order_distributor1|distributor_name}</div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

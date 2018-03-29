@@ -1,0 +1,47 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('salesoffice/index')}">{:lang('SALES_OFFICE')}</a></li>
+			<li><a href="{:url('salesoffice/salesofficeAdd')}">{:lang('ADD_SALES_OFFICE')}</a></li>
+		</ul>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th width="40">ID</th>
+					<th align="left">{:lang('CITY')}</th>
+					<th align="left">{:lang('PHONE')}</th>
+					<th align="left">{:lang('ADDRESSLINE1')}</th>
+					<th align="left">{:lang('ADDRESSLINE2')}</th>
+					<th align="left">{:lang('STATE')}</th>
+					<th align="left">{:lang('COUNTRY')}</th>
+					<th align="left">{:lang('POSTALCODE')}</th>
+					<th align="left">{:lang('TERRITORY')}</th>
+					<th align="left">{:lang('ACTIONS')}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="salesoffice" item="vo">
+				<tr>
+					<td>{$vo.sales_officeID}</td>
+					<td>{$vo.city}</td>
+					<td>{$vo.phone}</td>
+					<td>{$vo.addressLine1}</td>
+					<td>{$vo.addressLine2}</td>
+					<td>{$vo.state}</td>
+					<td>{$vo.country}</td>
+					<td>{$vo.postalCode}</td>
+					<td>{$vo.territory}</td>
+					<td>
+						<a href="{:url('salesoffice/salesofficeedit',array('id'=>$vo['sales_officeID']))}">{:lang('EDIT')}</a>
+						<a class="js-ajax-delete" href="{:url('salesoffice/salesofficeDelete',array('id'=>$vo['sales_officeID']))}">{:lang('DELETE')}</a>
+					</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

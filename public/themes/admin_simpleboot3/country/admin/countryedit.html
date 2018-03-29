@@ -1,0 +1,64 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('admin/index')}">{:lang('COUNTRY')}</a></li>
+			<li><a href="{:url('admin/countryAdd')}">{:lang('ADD_COUNTRY')}</a></li>
+			<li class="active"><a>编辑国家</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form margin-top-20" action="{:url('admin/countryeditpost')}" method="post">
+			<div class="form-group">
+				<label for="input-nameEnglish" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('NAMEENGLISH')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-nameEnglish" name="nameEnglish" value="{$data.nameEnglish}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-nameNative" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('NAMENATIVE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-nameNative" name="nameNative" value="{$data.nameNative}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-countrySymbol" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('COUNTRYSYMBOL')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-countrySymbol" name="countrySymbol" value="{$data.countrySymbol}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-flagImage" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('FLAGIMAGE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-flagImage" name="flagImage" value="{$data.flagImage}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-currencyNameEnglish" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('CURRENCYNAMEENGLISH')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-currencyNameEnglish" name="currencyNameEnglish" value="{$data.currencyNameEnglish}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-currencySymbol" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('CURRENCYSYMBOL')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-currencySymbol" name="currencySymbol" value="{$data.currencySymbol}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-currencyFXCode" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('CURRENCYFXCODE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-currencyFXCode" name="currencyFXCode" value="{$data.currencyFXCode}">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="countryID" value="{$data.countryID}"/>
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('SAVE')}</button>
+					<a class="btn btn-default" href="{:url('country/admin/index')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

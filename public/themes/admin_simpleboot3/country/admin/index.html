@@ -1,0 +1,45 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('admin/index')}">{:lang('COUNTRY')}</a></li>
+			<li><a href="{:url('admin/countryAdd')}">{:lang('ADD_COUNTRY')}</a></li>
+		</ul>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th width="40">ID</th>
+					<th align="left">{:lang('NAMEENGLISH')}</th>
+					<th align="left">{:lang('NAMENATIVE')}</th>
+					<th align="left">{:lang('COUNTRYSYMBOL')}</th>
+					<th align="left">{:lang('FLAGIMAGE')}</th>
+					<th align="left">{:lang('CURRENCYNAMEENGLISH')}</th>
+					<th align="left">{:lang('CURRENCYSYMBOL')}</th>
+					<th align="left">{:lang('CURRENCYFXCODE')}</th>
+					<th align="left">{:lang('ACTIONS')}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="country" item="vo">
+				<tr>
+					<td>{$vo.countryID}</td>
+					<td>{$vo.nameEnglish}</td>
+					<td>{$vo.nameNative}</td>
+					<td>{$vo.countrySymbol}</td>
+					<td>{$vo.flagImage}</td>
+					<td>{$vo.currencyNameEnglish}</td>
+					<td>{$vo.currencySymbol}</td>
+					<td>{$vo.currencyFXCode}</td>
+					<td>
+						<a href="{:url('admin/countryedit',array('id'=>$vo['countryID']))}">{:lang('EDIT')}</a>
+						<a class="js-ajax-delete" href="{:url('admin/countryDelete',array('id'=>$vo['countryID']))}">{:lang('DELETE')}</a>
+					</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

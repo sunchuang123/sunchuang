@@ -1,0 +1,46 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('otpsystem/index')}">{:lang('OTPSYSTEM')}</a></li>
+			<li><a href="{:url('otpsystem/otpAdd')}">{:lang('ADD_OTPSYSTEM')}</a></li>
+			<li class="active"><a>编辑OTP系统</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form margin-top-20" action="{:url('otpsystem/otpeditpost')}" method="post">
+			<div class="form-group">
+				<label for="input-otpSystemName" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('OTPSYSTEMNAME')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-otpSystemName" name="otpSystemName" value="{$data.otpSystemName}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-otpOperatorDescription" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('OTPOPERATORDESCRIPTION')}</label>
+				<div class="col-md-6 col-sm-10">
+					<textarea class="form-control" id="input-otpOperatorDescription" name="otpOperatorDescription" style="height: 50px;" placeholder="请填写描述">{$data.otpOperatorDescription}</textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-otpHashChainLength" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('OTPHASHCHAINLENGTH')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-otpHashChainLength" name="otpHashChainLength" value="{$data.otpHashChainLength}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-otpMaxHCJ" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('OTPMAXHCJ')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-otpMaxHCJ" name="otpMaxHCJ" value="{$data.otpMaxHCJ}">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="otpSystemID" value="{$data.otpSystemID}"/>
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('SAVE')}</button>
+					<a class="btn btn-default" href="{:url('product/otpsystem/index')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

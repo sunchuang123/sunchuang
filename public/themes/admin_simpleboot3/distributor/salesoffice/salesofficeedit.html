@@ -1,0 +1,76 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('salesoffice/index')}">{:lang('SALES_OFFICE')}</a></li>
+			<li><a href="{:url('salesoffice/salesofficeAdd')}">{:lang('ADD_SALES_OFFICE')}</a></li>
+			<li class="active"><a>编辑销售办公室</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form margin-top-20" action="{:url('salesoffice/salesofficeeditpost')}" method="post">
+			<div class="form-group">
+				<label for="input-sales_officeID" class="col-sm-2 control-label"><span class="form-required">*</span>ID</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-sales_officeID" name="sales_officeID" value="{$data.sales_officeID}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-city" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('CITY')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-city" name="city" value="{$data.city}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-phone" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('PHONE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-phone" name="phone" value="{$data.phone}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-addressLine1" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('ADDRESSLINE1')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-addressLine1" name="addressLine1" value="{$data.addressLine1}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-addressLine2" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('ADDRESSLINE2')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-addressLine2" name="addressLine2" value="{$data.addressLine2}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-state" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('STATE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-state" name="state" value="{$data.state}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-country" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('COUNTRY')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-country" name="country" value="{$data.country}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-postalCode" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('POSTALCODE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-postalCode" name="postalCode" value="{$data.postalCode}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-territory" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('TERRITORY')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-territory" name="territory" value="{$data.territory}">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="sales_officeID" value="{$data.sales_officeID}"/>
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('SAVE')}</button>
+					<a class="btn btn-default" href="{:url('distributor/salesoffice/index')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

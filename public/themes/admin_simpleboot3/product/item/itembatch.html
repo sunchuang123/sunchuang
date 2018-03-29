@@ -1,0 +1,97 @@
+<include file="public@header" />
+<link href="__STATIC__/js/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('item/index')}">{:lang('PRODUCTITEM')}</a></li>
+			<!--<li><a href="{:url('item/itemAdd')}">{:lang('ADD_PRODUCTITEM')}</a></li>-->
+			<li class="active"><a href="{:url('item/itembatch')}">{:lang('BATCH_PRODUCTITEM')}</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form margin-top-20" action="{:url('item/itemBatchpost')}" method="post">
+			<div class="form-group">
+				<label for="input-productModelID" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('PRODUCTMODEL')}</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="productModelID" id="input-productModelID">
+						<foreach name="model" item="vo">
+							<option value="{$vo.productModelID}">{$vo.producModeltName}</option>
+						</foreach>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-productBatchNumber" class="col-sm-2 control-label"><span class="form-required">*</span>日期</label>
+				<div class="col-md-6 col-sm-10">
+					<input class="form-control" type="text" id="form_date" name="date" value="{:date('y-m',time())}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-productBatchNumber" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('BATCHNUMBER')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-productBatchNumber" name="productBatchNumber">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-startID" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('STARTID')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-startID" name="startID">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-Suffix" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('PREFIX')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-Suffix" name="prefix">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-prefix" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('SUFFIX')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-prefix" name="Suffix">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-startIdNumber" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('IDLENGTH')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-startIdNumber" value="10" name="startIdNumber">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-Number" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('COUNT')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-Number" name="Number">
+				</div>
+			</div>
+			<div class="form-group">
+			<label for="input-otpsystem" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('OTPSYSTEM')}</label>
+			<div class="col-md-6 col-sm-10">
+				<select class="form-control" name="otpsystem" id="input-otpsystem">
+					<foreach name="otpSystem" item="vo">
+						<option value="{$vo.otpSystemID}">{$vo.otpSystemName}</option>
+					</foreach>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+			</div>
+		</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+	<script src="__STATIC__/js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+	<script>
+        $('#form_date').datetimepicker({
+            language:  'zh-CN',
+            format: 'yy-mm',
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 3, //这里就设置了默认视图为年视图
+            minView: 3, //设置最小视图为年视图
+            forceParse: 0,
+        });
+	</script>
+</body>
+</html>

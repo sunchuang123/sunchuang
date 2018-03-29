@@ -1,0 +1,43 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('agent/index')}">{:lang('AGENT')}</a></li>
+			<li><a href="{:url('agent/agentAdd')}">{:lang('ADD_AGENT')}</a></li>
+		</ul>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th width="40">ID</th>
+					<th align="left">{:lang('LANSTNAME')}</th>
+					<th align="left">{:lang('FIRSTNAME')}</th>
+					<th align="left">{:lang('PHONE_NUMBER')}</th>
+					<th align="left">{:lang('EMAIL')}</th>
+					<th align="left">{:lang('DEALER_AFFLIATION')}</th>
+					<th align="left">{:lang('DISTRIBUTOR')}</th>
+					<th align="left">{:lang('ACTIONS')}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="agent" item="vo">
+				<tr>
+					<td>{$vo.agentID}</td>
+					<td>{$vo.lastName}</td>
+					<td>{$vo.firstName}</td>
+					<td>{$vo.phoneNumber}</td>
+					<td>{$vo.email}</td>
+					<td>{$vo.dealerAffliation}</td>
+					<td>{$vo.distributor_distributorID}</td>
+					<td>
+						<a href="{:url('Agent/agentedit',array('id'=>$vo['agentID']))}">{:lang('EDIT')}</a>
+						<a class="js-ajax-delete" href="{:url('Agent/agentDelete',array('id'=>$vo['agentID']))}">{:lang('DELETE')}</a>
+					</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

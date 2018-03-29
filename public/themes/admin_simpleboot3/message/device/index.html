@@ -1,0 +1,31 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('device/index')}">{:lang('MESSAGE_DEVICE')}</a></li>
+		</ul>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th align="left">{:lang('DATETIME')}</th>
+					<th align="left">{:lang('TYPE')}</th>
+					<th align="left">{:lang('MESSAGE')}</th>
+					<th align="left">{:lang('PRODUCT_ITEM')}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="device" item="vo">
+				<tr>
+					<td>{$vo.messageFromDeviceDateTIme}</td>
+					<td>{$vo.messageFromDeviceType}</td>
+					<td>{$vo.messageFromDeviceText}</td>
+					<td>{$vo.productItemID}</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

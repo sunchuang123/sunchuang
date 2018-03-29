@@ -1,0 +1,102 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('distributor/index')}">{:lang('DISTRIBUTOR')}</a></li>
+			<li><a href="{:url('distributor/distributorAdd')}">{:lang('ADD_DISTRIBUTOR')}</a></li>
+			<li class="active"><a>编辑经销商</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form margin-top-20" action="{:url('distributor/distributoreditpost')}" method="post">
+			<div class="form-group">
+				<label for="input-customerName" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('NAME')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-customerName" name="customerName" value="{$data.customerName}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-contactLastName" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('LANSTNAME')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-contactLastName" name="contactLastName" value="{$data.contactLastName}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-contactFirstName" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('FIRSTNAME')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-contactFirstName" name="contactFirstName" value="{$data.contactFirstName}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-phone" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('PHONE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-phone" name="phone" value="{$data.phone}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-addressLine1" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('ADDRESSLINE1')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-addressLine1" name="addressLine1" value="{$data.addressLine1}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-addressLine2" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('ADDRESSLINE2')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-addressLine2" name="addressLine2" value="{$data.addressLine2}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-city" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('CITY')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-city" name="city" value="{$data.city}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-state" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('STATE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-state" name="state" value="{$data.state}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-postalCode" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('POSTALCODE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-postalCode" name="postalCode" value="{$data.postalCode}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-creditLimit" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('CREDITLIMIT')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-creditLimit" name="creditLimit" value="{$data.creditLimit}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-country_countryID" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('COUNTRY')}</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="country_countryID" id="input-country_countryID">
+						<foreach name="country" item="vo">
+							<if condition="($vo.countryID eq $data.country_countryID)">
+								<option value="{$vo.countryID}" selected="selected">{$vo.nameNative}</option>
+								<else />
+								<option value="{$vo.countryID}">{$vo.nameNative}</option>
+							</if>
+						</foreach>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-country" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('TEXTCOUNTRY')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-country" name="country" value="{$data.country}">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="distributorID" value="{$data.distributorID}"/>
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('SAVE')}</button>
+					<a class="btn btn-default" href="{:url('distributor/distributor/index')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

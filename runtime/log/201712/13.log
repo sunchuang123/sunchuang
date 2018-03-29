@@ -1,0 +1,1200 @@
+---------------------------------------------------------------
+[ 2017-12-13T16:09:59+08:00 ] 172.17.3.95 175.169.175.115 GET /admin/public/login.html
+[ info ] oves.sikuaikeji.com/admin/public/login.html [运行时间：0.035084s][吞吐率：28.50req/s] [内存消耗：4,968.80kb] [文件加载：72]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.008013s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000439s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ /var/www/html/thinkcmf/app/admin/controller/PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /var/www/html/thinkcmf/public/plugins/custom_admin_login/view/widget.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run plugins\custom_admin_login\CustomAdminLoginPlugin @admin_login [ RunTime:0.005239s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000369s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000574s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_option` [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `cmf_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000208s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_plugin` [ RunTime:0.000405s ]
+[ sql ] [ SQL ] SELECT `config` FROM `cmf_plugin` WHERE  `name` = 'CustomAdminLogin' LIMIT 1 [ RunTime:0.000165s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `cmf_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000172s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:09:59+08:00 ] 172.17.3.95 175.169.175.115 GET /captcha/new.html?height=32&width=150&font_size=18
+[ info ] oves.sikuaikeji.com/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.025923s][吞吐率：38.58req/s] [内存消耗：2,997.64kb] [文件加载：52]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.008288s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://oves.sikuaikeji.com/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000394s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ /var/www/html/thinkcmf/simplewind/cmf/controller/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000321s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000466s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000239s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:00+08:00 ] 172.17.3.95 175.169.175.115 GET /admin/public/login.html
+[ info ] oves.sikuaikeji.com/admin/public/login.html [运行时间：0.040076s][吞吐率：24.95req/s] [内存消耗：4,131.50kb] [文件加载：72]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.009832s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000466s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ /var/www/html/thinkcmf/app/admin/controller/PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /var/www/html/thinkcmf/public/plugins/custom_admin_login/view/widget.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run plugins\custom_admin_login\CustomAdminLoginPlugin @admin_login [ RunTime:0.005479s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001426s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000635s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000283s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_plugin` [ RunTime:0.000459s ]
+[ sql ] [ SQL ] SELECT `config` FROM `cmf_plugin` WHERE  `name` = 'CustomAdminLogin' LIMIT 1 [ RunTime:0.000179s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:00+08:00 ] 172.17.3.95 175.169.175.115 GET /captcha/new.html?height=32&width=150&font_size=18
+[ info ] oves.sikuaikeji.com/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.024392s][吞吐率：41.00req/s] [内存消耗：2,997.77kb] [文件加载：52]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007694s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://oves.sikuaikeji.com/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000416s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ /var/www/html/thinkcmf/simplewind/cmf/controller/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000278s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000444s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000199s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:01+08:00 ] 172.17.3.95 175.169.175.115 GET /admin/public/login.html
+[ info ] oves.sikuaikeji.com/admin/public/login.html [运行时间：0.035853s][吞吐率：27.89req/s] [内存消耗：4,968.95kb] [文件加载：72]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.008211s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000447s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ /var/www/html/thinkcmf/app/admin/controller/PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /var/www/html/thinkcmf/public/plugins/custom_admin_login/view/widget.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run plugins\custom_admin_login\CustomAdminLoginPlugin @admin_login [ RunTime:0.005598s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000356s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000583s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_option` [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `cmf_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000182s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_plugin` [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT `config` FROM `cmf_plugin` WHERE  `name` = 'CustomAdminLogin' LIMIT 1 [ RunTime:0.000156s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `cmf_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000171s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:01+08:00 ] 172.17.3.95 175.169.175.115 GET /captcha/new.html?height=32&width=150&font_size=18
+[ info ] oves.sikuaikeji.com/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.024827s][吞吐率：40.28req/s] [内存消耗：2,997.66kb] [文件加载：52]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007861s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://oves.sikuaikeji.com/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000409s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ /var/www/html/thinkcmf/simplewind/cmf/controller/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000320s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000483s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000239s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:01+08:00 ] 172.17.3.95 175.169.175.115 GET /admin/public/login.html
+[ info ] oves.sikuaikeji.com/admin/public/login.html [运行时间：0.032774s][吞吐率：30.51req/s] [内存消耗：4,130.49kb] [文件加载：72]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007724s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000400s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ /var/www/html/thinkcmf/app/admin/controller/PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /var/www/html/thinkcmf/public/plugins/custom_admin_login/view/widget.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run plugins\custom_admin_login\CustomAdminLoginPlugin @admin_login [ RunTime:0.004965s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000272s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000433s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000216s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_plugin` [ RunTime:0.000387s ]
+[ sql ] [ SQL ] SELECT `config` FROM `cmf_plugin` WHERE  `name` = 'CustomAdminLogin' LIMIT 1 [ RunTime:0.000168s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:01+08:00 ] 172.17.3.95 175.169.175.115 GET /captcha/new.html?height=32&width=150&font_size=18
+[ info ] oves.sikuaikeji.com/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.023645s][吞吐率：42.29req/s] [内存消耗：2,997.75kb] [文件加载：52]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007543s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://oves.sikuaikeji.com/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000403s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ /var/www/html/thinkcmf/simplewind/cmf/controller/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000257s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000438s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000219s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:01+08:00 ] 172.17.3.95 175.169.175.115 GET /admin/public/login.html
+[ info ] oves.sikuaikeji.com/admin/public/login.html [运行时间：0.033546s][吞吐率：29.81req/s] [内存消耗：4,130.49kb] [文件加载：72]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007982s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000423s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ /var/www/html/thinkcmf/app/admin/controller/PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /var/www/html/thinkcmf/public/plugins/custom_admin_login/view/widget.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run plugins\custom_admin_login\CustomAdminLoginPlugin @admin_login [ RunTime:0.005134s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000330s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000259s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_plugin` [ RunTime:0.000411s ]
+[ sql ] [ SQL ] SELECT `config` FROM `cmf_plugin` WHERE  `name` = 'CustomAdminLogin' LIMIT 1 [ RunTime:0.000162s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:01+08:00 ] 172.17.3.95 175.169.175.115 GET /captcha/new.html?height=32&width=150&font_size=18
+[ info ] oves.sikuaikeji.com/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.024643s][吞吐率：40.58req/s] [内存消耗：2,997.63kb] [文件加载：52]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007745s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://oves.sikuaikeji.com/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000409s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ /var/www/html/thinkcmf/simplewind/cmf/controller/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000281s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000446s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000203s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:02+08:00 ] 172.17.3.95 175.169.175.115 GET /admin/public/login.html
+[ info ] oves.sikuaikeji.com/admin/public/login.html [运行时间：0.033642s][吞吐率：29.72req/s] [内存消耗：4,130.49kb] [文件加载：72]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.008095s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000419s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ /var/www/html/thinkcmf/app/admin/controller/PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /var/www/html/thinkcmf/public/plugins/custom_admin_login/view/widget.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run plugins\custom_admin_login\CustomAdminLoginPlugin @admin_login [ RunTime:0.005225s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000339s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000569s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000274s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_plugin` [ RunTime:0.000424s ]
+[ sql ] [ SQL ] SELECT `config` FROM `cmf_plugin` WHERE  `name` = 'CustomAdminLogin' LIMIT 1 [ RunTime:0.000172s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:02+08:00 ] 172.17.3.95 175.169.175.115 GET /captcha/new.html?height=32&width=150&font_size=18
+[ info ] oves.sikuaikeji.com/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.024320s][吞吐率：41.12req/s] [内存消耗：2,997.72kb] [文件加载：52]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007756s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://oves.sikuaikeji.com/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000412s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ /var/www/html/thinkcmf/simplewind/cmf/controller/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000316s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000231s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:02+08:00 ] 172.17.3.95 175.169.175.115 GET /admin/public/login.html
+[ info ] oves.sikuaikeji.com/admin/public/login.html [运行时间：0.032811s][吞吐率：30.48req/s] [内存消耗：4,130.49kb] [文件加载：72]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007777s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000423s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ /var/www/html/thinkcmf/app/admin/controller/PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /var/www/html/thinkcmf/public/plugins/custom_admin_login/view/widget.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run plugins\custom_admin_login\CustomAdminLoginPlugin @admin_login [ RunTime:0.004990s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000298s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000476s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000226s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_plugin` [ RunTime:0.000409s ]
+[ sql ] [ SQL ] SELECT `config` FROM `cmf_plugin` WHERE  `name` = 'CustomAdminLogin' LIMIT 1 [ RunTime:0.000162s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:02+08:00 ] 172.17.3.95 175.169.175.115 GET /captcha/new.html?height=32&width=150&font_size=18
+[ info ] oves.sikuaikeji.com/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.024659s][吞吐率：40.55req/s] [内存消耗：2,997.60kb] [文件加载：52]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.008018s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://oves.sikuaikeji.com/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000379s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ /var/www/html/thinkcmf/simplewind/cmf/controller/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000289s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000589s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000250s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:02+08:00 ] 172.17.3.95 175.169.175.115 GET /admin/public/login.html
+[ info ] oves.sikuaikeji.com/admin/public/login.html [运行时间：0.032210s][吞吐率：31.05req/s] [内存消耗：4,130.49kb] [文件加载：72]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007692s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000353s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ /var/www/html/thinkcmf/app/admin/controller/PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /var/www/html/thinkcmf/public/plugins/custom_admin_login/view/widget.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run plugins\custom_admin_login\CustomAdminLoginPlugin @admin_login [ RunTime:0.004992s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000181s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000463s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000192s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_plugin` [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT `config` FROM `cmf_plugin` WHERE  `name` = 'CustomAdminLogin' LIMIT 1 [ RunTime:0.000166s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:02+08:00 ] 172.17.3.95 175.169.175.115 GET /admin/public/login.html
+[ info ] oves.sikuaikeji.com/admin/public/login.html [运行时间：0.033574s][吞吐率：29.78req/s] [内存消耗：4,130.49kb] [文件加载：72]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.008120s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000368s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ /var/www/html/thinkcmf/app/admin/controller/PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /var/www/html/thinkcmf/public/plugins/custom_admin_login/view/widget.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run plugins\custom_admin_login\CustomAdminLoginPlugin @admin_login [ RunTime:0.005028s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000250s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000427s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000222s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_plugin` [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT `config` FROM `cmf_plugin` WHERE  `name` = 'CustomAdminLogin' LIMIT 1 [ RunTime:0.000190s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:02+08:00 ] 172.17.3.95 175.169.175.115 GET /captcha/new.html?height=32&width=150&font_size=18
+[ info ] oves.sikuaikeji.com/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.023611s][吞吐率：42.35req/s] [内存消耗：2,997.79kb] [文件加载：52]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007391s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://oves.sikuaikeji.com/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000377s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ /var/www/html/thinkcmf/simplewind/cmf/controller/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000226s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000187s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:02+08:00 ] 172.17.3.95 175.169.175.115 GET /admin/public/login.html
+[ info ] oves.sikuaikeji.com/admin/public/login.html [运行时间：0.032744s][吞吐率：30.54req/s] [内存消耗：4,130.49kb] [文件加载：72]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007650s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000371s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ /var/www/html/thinkcmf/app/admin/controller/PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /var/www/html/thinkcmf/public/plugins/custom_admin_login/view/widget.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run plugins\custom_admin_login\CustomAdminLoginPlugin @admin_login [ RunTime:0.005153s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000258s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000422s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000185s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_plugin` [ RunTime:0.000404s ]
+[ sql ] [ SQL ] SELECT `config` FROM `cmf_plugin` WHERE  `name` = 'CustomAdminLogin' LIMIT 1 [ RunTime:0.000162s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:02+08:00 ] 172.17.3.95 175.169.175.115 GET /captcha/new.html?height=32&width=150&font_size=18
+[ info ] oves.sikuaikeji.com/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.023526s][吞吐率：42.51req/s] [内存消耗：2,997.63kb] [文件加载：52]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007406s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://oves.sikuaikeji.com/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000379s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ /var/www/html/thinkcmf/simplewind/cmf/controller/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000227s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000180s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:03+08:00 ] 172.17.3.95 175.169.175.115 GET /admin/public/login.html
+[ info ] oves.sikuaikeji.com/admin/public/login.html [运行时间：0.034410s][吞吐率：29.06req/s] [内存消耗：4,968.95kb] [文件加载：72]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007918s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000397s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ /var/www/html/thinkcmf/app/admin/controller/PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /var/www/html/thinkcmf/public/plugins/custom_admin_login/view/widget.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run plugins\custom_admin_login\CustomAdminLoginPlugin @admin_login [ RunTime:0.005305s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000333s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000548s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000246s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_option` [ RunTime:0.000398s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `cmf_option` WHERE  `option_name` = 'cdn_settings' LIMIT 1 [ RunTime:0.000191s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_plugin` [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SELECT `config` FROM `cmf_plugin` WHERE  `name` = 'CustomAdminLogin' LIMIT 1 [ RunTime:0.000157s ]
+[ sql ] [ SQL ] SELECT `option_value` FROM `cmf_option` WHERE  `option_name` = 'admin_settings' LIMIT 1 [ RunTime:0.000148s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:04+08:00 ] 172.17.3.95 175.169.175.115 GET /captcha/new.html?height=32&width=150&font_size=18
+[ info ] oves.sikuaikeji.com/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.024391s][吞吐率：41.00req/s] [内存消耗：2,997.59kb] [文件加载：52]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007754s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://oves.sikuaikeji.com/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000354s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ /var/www/html/thinkcmf/simplewind/cmf/controller/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000228s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000495s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000230s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:04+08:00 ] 172.17.3.95 175.169.175.115 GET /admin/public/login.html
+[ info ] oves.sikuaikeji.com/admin/public/login.html [运行时间：0.033079s][吞吐率：30.23req/s] [内存消耗：4,130.49kb] [文件加载：72]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.008050s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000376s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ /var/www/html/thinkcmf/app/admin/controller/PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /var/www/html/thinkcmf/public/plugins/custom_admin_login/view/widget.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run plugins\custom_admin_login\CustomAdminLoginPlugin @admin_login [ RunTime:0.005096s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000326s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000631s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000282s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_plugin` [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT `config` FROM `cmf_plugin` WHERE  `name` = 'CustomAdminLogin' LIMIT 1 [ RunTime:0.000200s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:04+08:00 ] 172.17.3.95 175.169.175.115 GET /admin/public/login.html
+[ info ] oves.sikuaikeji.com/admin/public/login.html [运行时间：0.058332s][吞吐率：17.14req/s] [内存消耗：4,130.49kb] [文件加载：72]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.007720s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'public',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000383s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn.php
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\admin\controller\PublicController->login[ /var/www/html/thinkcmf/app/admin/controller/PublicController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /var/www/html/thinkcmf/public/plugins/custom_admin_login/view/widget.html [ array (
+) ]
+[ info ] [ BEHAVIOR ] Run plugins\custom_admin_login\CustomAdminLoginPlugin @admin_login [ RunTime:0.005552s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000273s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000432s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000240s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_plugin` [ RunTime:0.000503s ]
+[ sql ] [ SQL ] SELECT `config` FROM `cmf_plugin` WHERE  `name` = 'CustomAdminLogin' LIMIT 1 [ RunTime:0.000181s ]
+---------------------------------------------------------------
+[ 2017-12-13T16:10:04+08:00 ] 172.17.3.95 175.169.175.115 GET /captcha/new.html?height=32&width=150&font_size=18
+[ info ] oves.sikuaikeji.com/captcha/new.html?height=32&width=150&font_size=18 [运行时间：0.024979s][吞吐率：40.03req/s] [内存消耗：2,997.63kb] [文件加载：52]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run cmf\behavior\InitHookBehavior @app_init [ RunTime:0.008013s ]
+[ info ] [ LANG ] /var/www/html/thinkcmf/simplewind/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\cmf\\controller\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'oves.sikuaikeji.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.7 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://oves.sikuaikeji.com/admin/public/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6014otgg6f927ar1utodv0mtb2; admin_username=admin; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'height' => '32',
+  'width' => '150',
+  'font_size' => '18',
+)
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../simplewind/cmf/lang/zh-cn.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/admin/lang/zh-cn/common.php
+[ info ] [ LANG ] /var/www/html/thinkcmf/public/../app/portal/lang/zh-cn/common.php
+[ info ] [ BEHAVIOR ] Run cmf\behavior\LangBehavior @app_begin [ RunTime:0.000393s ]
+[ info ] [ RUN ] cmf\controller\CaptchaController->index[ /var/www/html/thinkcmf/simplewind/cmf/controller/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000356s ] mysql:dbname=thinkcmf5;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `cmf_hook_plugin` [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SELECT `hook`,`plugin` FROM `cmf_hook_plugin` WHERE  `status` = 1 ORDER BY list_order ASC [ RunTime:0.000258s ]

@@ -1,0 +1,77 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('status/index')}">{:lang('PRODUCTSTATUS')}</a></li>
+		</ul>
+		<form class="well form-inline margin-top-20" method="post" action="{:url('status/index')}">
+			原始设备制造商编号:
+			<input type="text" class="form-control" name="keyword" style="width: 200px;"
+				   value="{$keyword}" placeholder="请输入关键字...">
+			<input type="submit" class="btn btn-primary" value="搜索"/>
+			<a class="btn btn-danger" href="{:url('status/index')}">清空</a>&nbsp;&nbsp;&nbsp;&nbsp;
+		</form>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th width="90">编号</th>
+					<th align="left">{:lang('OEMSN')}</th>
+					<th align="left">{:lang('UPDATETIMESTAMP')}</th>
+					<th align="left">{:lang('FIRMWAREVERSION')}</th>
+					<th align="left">{:lang('HARDWAREVERSION')}</th>
+					<th align="left">{:lang('PGSTATE')}</th>
+					<th align="left">{:lang('PGENABLED')}</th>
+					<th align="left">{:lang('PGDAYS')}</th>
+					<th align="left">{:lang('PGRUNDAYS')}</th>
+					<th align="left">{:lang('PRODUCTERRORCODE')}</th>
+					<th align="left">{:lang('RELATIVESOC')}</th>
+					<th align="left">{:lang('REMAININGCHARGE')}</th>
+					<th align="left">{:lang('ACCUENERGYOUTPUT')}</th>
+					<th align="left">{:lang('FULLCHARGECAPACITY')}</th>
+					<th align="left">{:lang('ACCUCYCLES')}</th>
+					<th align="left">{:lang('BATTERYVOLTAGE')}</th>
+					<th align="left">{:lang('BATTERYCURRENT')}</th>
+					<th align="left">{:lang('BATTERYTEMPERATURE')}</th>
+					<th align="left">{:lang('BATTERYCELLS')}</th>
+					<th align="left">{:lang('CELLVOLTAGE')}</th>
+					<th align="left">{:lang('CELLVOLTAGE')}</th>
+					<th align="left">{:lang('CELLVOLTAGE')}</th>
+					<th align="left">{:lang('CELLVOLTAGE')}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="status" item="vo">
+				<tr>
+					<td>{$vo.productStatusID}</td>
+					<td>{$vo.productItemOEM_SN}</td>
+					<td>{$vo.updateTimestamp}</td>
+					<td>{$vo.firmwareVersion}</td>
+					<td>{$vo.hardwareVersion}</td>
+					<td>{$vo.pgState}</td>
+					<td>{$vo.pgEnabled}</td>
+					<td>{$vo.pgDays}</td>
+					<td>{$vo.pgRunDays}</td>
+					<td>{$vo.productErrorCode}</td>
+					<td>{$vo.relativeSOC}</td>
+					<td>{$vo.remainingCharge}</td>
+					<td>{$vo.accuEnergyOutput}</td>
+					<td>{$vo.fullChargeCapacity}</td>
+					<td>{$vo.accuCycles}</td>
+					<td>{$vo.batteryVoltage}</td>
+					<td>{$vo.batteryCurrent}</td>
+					<td>{$vo.batteryTemperature}</td>
+					<td>{$vo.batteryCells}</td>
+					<td>{$vo.cell1Voltage}</td>
+					<td>{$vo.cell2Voltage}</td>
+					<td>{$vo.cell3Voltage}</td>
+					<td>{$vo.cell4Voltage}</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+		<ul class="pagination">{$page}</ul>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('distributor/index')}">{:lang('DISTRIBUTOR')}</a></li>
+			<li><a href="{:url('distributor/distributorAdd')}">{:lang('ADD_DISTRIBUTOR')}</a></li>
+		</ul>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th width="40">ID</th>
+					<th align="left">{:lang('NAME')}</th>
+					<th align="left">{:lang('LANSTNAME')}</th>
+					<th align="left">{:lang('FIRSTNAME')}</th>
+					<th align="left">{:lang('PHONE')}</th>
+					<th align="left">{:lang('ADDRESSLINE1')}</th>
+					<th align="left">{:lang('ADDRESSLINE2')}</th>
+					<th align="left">{:lang('CITY')}</th>
+					<th align="left">{:lang('STATE')}</th>
+					<th align="left">{:lang('POSTALCODE')}</th>
+					<th align="left">{:lang('CREDITLIMIT')}</th>
+					<th align="left">{:lang('COUNTRY')}</th>
+					<th align="left">{:lang('TEXTCOUNTRY')}</th>
+					<th align="left">{:lang('ACTIONS')}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="distributor" item="vo">
+				<tr>
+					<td>{$vo.distributorID}</td>
+					<td>{$vo.customerName}</td>
+					<td>{$vo.contactLastName}</td>
+					<td>{$vo.contactFirstName}</td>
+					<td>{$vo.phone}</td>
+					<td>{$vo.addressLine1}</td>
+					<td>{$vo.addressLine2}</td>
+					<td>{$vo.city}</td>
+					<td>{$vo.state}</td>
+					<td>{$vo.postalCode}</td>
+					<td>{$vo.creditLimit}</td>
+					<td>{$vo.country_countryID|country_name}</td>
+					<td>{$vo.country}</td>
+					<td>
+						<a href="{:url('distributor/distributoredit',array('id'=>$vo['distributorID']))}">{:lang('EDIT')}</a>
+						<a class="js-ajax-delete" href="{:url('distributor/distributorDelete',array('id'=>$vo['distributorID']))}">{:lang('DELETE')}</a>
+					</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

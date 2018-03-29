@@ -1,0 +1,43 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('otpsystem/index')}">{:lang('OTPSYSTEM')}</a></li>
+			<li class="active"><a href="{:url('otpsystem/otpAdd')}">{:lang('ADD_OTPSYSTEM')}</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form margin-top-20" action="{:url('otpsystem/otpAddPost')}" method="post">
+			<div class="form-group">
+				<label for="input-otpSystemName" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('OTPSYSTEMNAME')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-otpSystemName" name="otpSystemName">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-otpOperatorDescription" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('OTPOPERATORDESCRIPTION')}</label>
+				<div class="col-md-6 col-sm-10">
+					<textarea class="form-control" id="input-otpOperatorDescription" name="otpOperatorDescription" style="height: 50px;" placeholder="请填写描述"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-otpHashChainLength" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('OTPHASHCHAINLENGTH')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-otpHashChainLength" name="otpHashChainLength" value="100000">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-otpMaxHCJ" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('OTPMAXHCJ')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-otpMaxHCJ" name="otpMaxHCJ" value="1096">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

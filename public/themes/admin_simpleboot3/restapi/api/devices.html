@@ -1,0 +1,24 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('api/devices')}">{:lang('DEVICES')}</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form margin-top-20" action="{:url('api/devicesPost')}" method="post">
+			<div class="form-group">
+				<label for="input-hardwareId" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('DEVICEHARDWAREID')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-hardwareId" name="hardwareId">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('DEVICESADD')}</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

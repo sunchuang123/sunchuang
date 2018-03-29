@@ -1,0 +1,85 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('api/devices')}">{:lang('DEVICES')}</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form margin-top-20">
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('CREATEDDATE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.createdDate}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('CREATEDBY')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.createdBy}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('DEVICEHARDWAREID')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.hardwareId}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SITETOKEN')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.siteToken}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SPECIFICATION_CREATEDDATE')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.specification.createdDate}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SPECIFICATION_TOKEN')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.specification.token}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SPECIFICATION_NAME')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.specification.name}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SPECIFICATION_ASSETMODULEID')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.specification.assetModuleId}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SPECIFICATION_ASSETID')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.specification.assetId}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SPECIFICATION_ASSETNAME')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.specification.assetName}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SPECIFICATION_ASSETIMAGEURL')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.specification.assetImageUrl}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">{:lang('SPECIFICATION_CONTAINERPOLICY')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" readonly="true" class="form-control"value="{$res.specification.containerPolicy}">
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

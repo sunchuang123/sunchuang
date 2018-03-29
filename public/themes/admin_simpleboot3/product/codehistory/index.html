@@ -1,0 +1,33 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a >{:lang('CODEHISTORY')}</a></li>
+		</ul>
+		<table class="table table-hover table-bordered">
+			<thead>
+			<tr>
+				<th width="90">编号</th>
+				<th align="left">{:lang('INDEX')}</th>
+				<th align="left">{:lang('VALUE')}</th>
+				<th align="left">{:lang('DATE')}</th>
+				<th align="left">{:lang('OTP')}</th>
+			</tr>
+			</thead>
+			<tbody>
+			<foreach name="code" item="vo">
+				<tr>
+					<td>{$vo.codeHistoryID}</td>
+					<td>{$vo.codeIndex}</td>
+					<td>{$vo.codeValue}</td>
+					<td>{$vo.codeDate}</td>
+					<td>{$vo.otpGeneratorID|OEM}</td>
+				</tr>
+			</foreach>
+			</tbody>
+		</table>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

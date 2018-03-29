@@ -1,0 +1,58 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('item/index')}">{:lang('PRODUCTITEM')}</a></li>
+			<!--<li class="active"><a href="{:url('item/itemAdd')}">{:lang('ADD_PRODUCTITEM')}</a></li>-->
+			<li><a href="{:url('item/itembatch')}">{:lang('BATCH_PRODUCTITEM')}</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form margin-top-20" action="{:url('item/itemAddPost')}" method="post">
+			<div class="form-group">
+				<label for="input-productModelID" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('PRODUCTMODEL')}</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="productModelID" id="input-productModelID">
+						<foreach name="model" item="vo">
+							<option value="{$vo.productModelID}">{$vo.producModeltName}</option>
+						</foreach>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-productBatchNumber" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('BATCHNUMBER')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-productBatchNumber" name="productBatchNumber">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-productItemOEM_SN" class="col-sm-2 control-label">原始设备制造商编号</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-productItemOEM_SN" value="{:date('YmdHis')}{:rand(1000,9999)}" name="productItemOEM_SN">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-lifeCycleStatus" class="col-sm-2 control-label">{:lang('LIFECYCLESTATUS')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-lifeCycleStatus" value="New" name="lifeCycleStatus">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-otpsystem" class="col-sm-2 control-label"><span class="form-required">*</span>{:lang('OTPSYSTEM')}</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="otpsystem" id="input-otpsystem">
+						<foreach name="otpSystem" item="vo">
+							<option value="{$vo.otpSystemID}">{$vo.otpSystemName}</option>
+						</foreach>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('ADD')}</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

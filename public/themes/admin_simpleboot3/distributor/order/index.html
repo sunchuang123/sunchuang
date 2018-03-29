@@ -1,0 +1,41 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="{:url('order/index')}">{:lang('DISTRIBUTOR_ORDER')}</a></li>
+		</ul>
+		<table class="table table-hover table-bordered">
+			<thead>
+				<tr>
+					<th width="40">ID</th>
+					<th align="left">{:lang('ORDER_DATE')}</th>
+					<th align="left">{:lang('REQUIRED_DATE')}</th>
+					<th align="left">{:lang('SHIPPED_DATE')}</th>
+					<th align="left">{:lang('STATUS')}</th>
+					<th align="left">{:lang('COMMENTS')}</th>
+					<th align="left">{:lang('DISTRIBUTOR')}</th>
+					<th align="left">{:lang('ACTIONS')}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="order" item="vo">
+				<tr>
+					<td>{$vo.orderID}</td>
+					<td>{$vo.orderDate}</td>
+					<td>{$vo.requiredDate}</td>
+					<td>{$vo.shippedDate}</td>
+					<td>{$vo.status}</td>
+					<td>{$vo.comments}</td>
+					<td>{$vo.fk_distributor_order_distributor1|distributor_name}</td>
+					<td>
+						<a href="{:url('order/orderdetails',array('id'=>$vo['orderID']))}">{:lang('ORDERDETAILS')}</a>
+					</td>
+				</tr>
+				</foreach>
+			</tbody>
+		</table>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>

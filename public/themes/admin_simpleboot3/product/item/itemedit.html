@@ -1,0 +1,85 @@
+<include file="public@header" />
+</head>
+<body>
+	<div class="wrap js-check-wrap">
+		<ul class="nav nav-tabs">
+			<li><a href="{:url('item/index')}">{:lang('PRODUCTITEM')}</a></li>
+			<!--<li><a href="{:url('item/itemAdd')}">{:lang('ADD_PRODUCTITEM')}</a></li>-->
+			<li><a href="{:url('item/itembatch')}">{:lang('BATCH_PRODUCTITEM')}</a></li>
+			<li class="active"><a>编辑产品项目</a></li>
+		</ul>
+		<form class="form-horizontal js-ajax-form margin-top-20" action="{:url('item/itemeditpost')}" method="post">
+			<div class="form-group">
+				<label for="input-productItemID" class="col-sm-2 control-label"><span class="form-required">*</span>编号</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-productItemID" name="productItemID" disabled="true" value="{$data.productItemID}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-productModelID" class="col-sm-2 control-label">{:lang('PRODUCTMODEL')}</label>
+				<div class="col-md-6 col-sm-10">
+					<select class="form-control" name="productModelID" id="input-productModelID">
+						<foreach name="model" item="vo">
+							<if condition="($vo.productModelID eq $data.productModelID)">
+								<option value="{$vo.productModelID}" selected="selected">{$vo.producModeltName}</option>
+								<else />
+								<option value="{$vo.productModelID}">{$vo.producModeltName}</option>
+							</if>
+						</foreach>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">PAYG序列号</label>
+				<div class="col-md-6 col-sm-10">
+                    <if condition="($data.productItemOEM_SN eq $data.productItemPAYG_SN)">
+                        <label class="radio-inline">
+                            <input type="radio" name="payg" value="0" checked="checked" onclick="oem_paygval()"> 默认					</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="payg" value="1" onclick="payg_paygval()"> 自定义					</label>
+                        <else/>
+                        <label class="radio-inline">
+                            <input type="radio" name="payg" value="0" onclick="oem_paygval()"> 默认					</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="payg" value="1" checked="checked" onclick="payg_paygval()"> 自定义					</label>
+                    </if>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-productItemPAYG_SN" class="col-sm-2 control-label"><span class="form-required"></span></label>
+				<div class="col-md-6 col-sm-10">
+					<if condition="($data.productItemOEM_SN eq $data.productItemPAYG_SN)">
+					<input type="text" class="form-control" id="input-productItemPAYG_SN" disabled="true" name="productItemPAYG_SN" value="{$data.productItemPAYG_SN}">
+					<else/>
+					<input type="text" class="form-control" id="input-productItemPAYG_SN" name="productItemPAYG_SN" value="{$data.productItemPAYG_SN}">
+					</if>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="input-lifeCycleStatus" class="col-sm-2 control-label"><span class="form-required"></span>{:lang('LIFECYCLESTATUS')}</label>
+				<div class="col-md-6 col-sm-10">
+					<input type="text" class="form-control" id="input-lifeCycleStatus" name="lifeCycleStatus" value="{$data.lifeCycleStatus}">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<input type="hidden" name="productItemID" value="{$data.productItemID}"/>
+					<button type="submit" class="btn btn-primary js-ajax-submit">{:lang('SAVE')}</button>
+					<a class="btn btn-default" href="{:url('product/item/index')}">{:lang('BACK')}</a>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script src="__STATIC__/js/admin.js"></script>
+</body>
+</html>
+<script>
+    function oem_paygval(){
+        $('#input-productItemPAYG_SN').attr('disabled',true);
+        $('#input-productItemPAYG_SN').val('{$data.productItemOEM_SN}');
+    }
+    function payg_paygval(){
+        $('#input-productItemPAYG_SN').attr('disabled',false);
+        $('#input-productItemPAYG_SN').val('{$data.productItemPAYG_SN}');
+    }
+</script>
